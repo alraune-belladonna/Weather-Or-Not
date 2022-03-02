@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+
+.dayForcast {
+  background-color: rgb(0, 132, 255);
+  margin: 1%;
+  font: bold;
+}
+
+#searchMenu {
+  width: 22%;
+  padding: 2%;
+  padding-right: 0%;
+}
+
+#weatherSection {
+  width: 75%;
+  padding: 1%;
+  padding-top: 4%;
+  margin: 3%;
+  margin-left: 1%;
+  margin-right: 1%;
+}

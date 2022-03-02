@@ -3,17 +3,24 @@
 let lat = 35
 let lon = 139
 
-// let geoCodingAPI = 'https://api.myptv.com/geocoding/v1/locations/by-text?searchText=Oceanside%20&apiKey=YzRhMGVjOTgwNTJmNGRiOTg1ODViMzM2YzZjOGFmZjA6MTA2ZjY0MzQtYWFkZi00MjE4LTg4NmQtZWVhYmU3NzJiNTUy'
+let locationInput = document.getElementById('cityName').value
 
-// 'https://api.myptv.com/geocoding/v1/locations/by-text?searchText=aan%27t%20verlaat%2033f%20&apiKey=YOUR_API_KEY'
+let searchButton = document.getElementById('confirmSearch')
 
-// fetch(geoCodingAPI)
-//   .then(function (response) {
-//     return response.json()
-//   })
-//   .then(function(data) {
-//     console.log(data)
-//   })
+searchButton.addEventListener('click', console.log('click'))
+
+let geoCodingAPI = 'http://api.openweathermap.org/geo/1.0/direct?q=${' + locationInput + '}&limit=5&appid=f656a41670de8a8c5067987b0bdf5407'
+
+function locationApi() {
+  fetch(geoCodingAPI)
+
+    .then(function (response) {
+      return response.json()
+    })
+    .then(function (data) {
+      console.log(data)
+    })
+}
 
 console.log(document.getElementById('locationName').innerHTML)
 

@@ -27,7 +27,7 @@ function locationAPI() {
 
   console.log(locationInput)
 
-  let geoCodingAPI = 'http://api.openweathermap.org/geo/1.0/direct?q=${' + locationInput + '}&limit=5&appid=f656a41670de8a8c5067987b0bdf5407'
+  let geoCodingAPI = 'https://api.openweathermap.org/geo/1.0/direct?q=${' + locationInput + '}&limit=5&appid=f656a41670de8a8c5067987b0bdf5407'
 
   fetch(geoCodingAPI)
 
